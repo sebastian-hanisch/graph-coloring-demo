@@ -1,5 +1,7 @@
 # Graphfärbung – Greedy, Welsh-Powell, DSATUR, exakt – Streamlit-Demo
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-graph-coloring-demo.streamlit.app/)**
+
 Fünftes Stück der **Graphen-und-Netzwerke-Reihe** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kind der Durchmusterung ([bfs-dfs-demo](https://github.com/sebastian-hanisch/bfs-dfs-demo)). Eine **Knotenfärbung** weist jedem Knoten eine Farbe zu, sodass keine zwei benachbarten Knoten dieselbe Farbe haben; die **chromatische Zahl** χ(G) ist die kleinste Farbenzahl, mit der das gelingt. Klassische Schranken: **ω(G) ≤ χ(G) ≤ Δ(G) + 1** (Cliquenzahl, Maximalgrad). **Greedy** (feste Reihenfolge, kleinste freie Farbe je Knoten) ist *reihenfolgeabhängig*: dieselbe Instanz kann mit verschiedenen Reihenfolgen sehr unterschiedlich viele Farben brauchen. **Welsh-Powell** (1967, Grad absteigend) und **DSATUR** (Brélaz 1979, Sättigungsgrad) sind zwei feste Strategien dagegen; eine **exakte** Suche (Backtracking mit der Cliquenzahl als untere Schranke) findet χ selbst für kleine Graphen. Bei **Intervallgraphen** ist Greedy nach Startzeit sortiert beweisbar optimal; beim **Kronengraphen** zeigt eine schlechte Reihenfolge das Gegenteil.
 
 **Einordnung in die Reihe:** die Reihe hat zwölf Stücke, dies ist das fünfte (Details in `graphen-planung/PLAN.md` des Portfolio-Ordners):
