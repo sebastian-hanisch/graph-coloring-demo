@@ -62,7 +62,7 @@ nach Startzeit sortiert beweisbar optimal (χ = ω); beim **Kronengraphen** zeig
 """
 )
 st.caption(
-    "Kind der BFS-und-DFS-Demo (fünftes Stück der Graphen-und-Netzwerke-Reihe); geplante Nachfolger (nicht gebaut): Zentralität, Strukturkennzahlen, Robustheit, Kaskaden, kritische Knoten härten, "
+    "Kind der BFS-und-DFS-Demo (fünftes Stück der Graphen-und-Netzwerke-Reihe); Nachfolger (inzwischen gebaut): Zentralität, Strukturkennzahlen, Robustheit, Kaskaden, kritische Knoten härten, "
     "Bandbreite. Eine **Cliquenüberdeckung** (kleinste Zahl von Cliquen, die alle Knoten überdecken) ist genau die Färbung des Komplementgraphen - die Brücke zu Stück 12 (Bandbreite von G(n,k,b))."
 )
 
@@ -228,7 +228,7 @@ with st.expander("📐 Mathematische Formulierung"):
 **Graph.** $G=(V,E)$, $n=|V|$, $m=|E|$. Eine **Färbung** ist eine Abbildung $c: V \to \{0,1,\dots\}$ mit $c(u) \neq c(v)$ für jede Kante $\{u,v\}$. Die **chromatische Zahl** $\chi(G)$ ist die kleinste
 Zahl Farben, mit der das gelingt.
 
-**Schranken.** $\omega(G) \le \chi(G) \le \Delta(G) + 1$, wobei $\omega(G)$ die Cliquenzahl (größte vollständige Teilgraph) und $\Delta(G)$ der Maximalgrad ist.
+**Schranken.** $\omega(G) \le \chi(G) \le \Delta(G) + 1$, wobei $\omega(G)$ die Cliquenzahl (größter vollständiger Teilgraph) und $\Delta(G)$ der Maximalgrad ist.
 
 **Greedy.** In einer Reihenfolge $v_1,\dots,v_n$ erhält $v_i$ die kleinste Farbe, die kein bereits gefärbter Nachbar hat. Reihenfolgeabhängig; im schlechtesten Fall $\Delta+1$ Farben (Kronengraph).
 
@@ -252,6 +252,6 @@ Implementiert in `gc_algorithm.py` (Greedy, Welsh-Powell, DSATUR, exakte Cliquen
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Graphen und Netzwerke: BFS bis Cliquenbandbreite](https://sebastianhanisch.net/konzepte-graphen-netzwerke.html)."
 )
