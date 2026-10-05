@@ -234,7 +234,7 @@ Zahl Farben, mit der das gelingt.
 
 **Welsh-Powell (1967).** Greedy in absteigender Gradreihenfolge.
 
-**DSATUR (Brélaz 1979).** Dynamisch: wähle den ungefärbten Knoten mit größtem Sättigungsgrad (Zahl verschiedener Farben unter gefärbten Nachbarn); Gleichstand nach Restgrad. Beweisbar optimal auf
+**DSATUR (Brélaz 1979).** Dynamisch: wähle den ungefärbten Knoten mit größtem Sättigungsgrad (Zahl verschiedener Farben unter gefärbten Nachbarn); Gleichstand nach Grad im Gesamtgraphen (wie in networkx; Brélaz' Original zählt nur ungefärbte Nachbarn - das ändert einzelne Ergebnisse). Beweisbar optimal auf
 bipartiten Graphen.
 
 **Intervallgraphen.** Perfekte Graphen: $\chi = \omega$ immer. Greedy nach Startzeit sortiert findet eine $\omega$-Färbung: an jedem Punkt der Zeitachse ist die Zahl gleichzeitig offener Intervalle

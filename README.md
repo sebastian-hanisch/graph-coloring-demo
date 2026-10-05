@@ -4,7 +4,7 @@
 
 Fünftes Stück der **Graphen-und-Netzwerke-Reihe** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kind der Durchmusterung ([bfs-dfs-demo](https://github.com/sebastian-hanisch/bfs-dfs-demo)). Eine **Knotenfärbung** weist jedem Knoten eine Farbe zu, sodass keine zwei benachbarten Knoten dieselbe Farbe haben; die **chromatische Zahl** χ(G) ist die kleinste Farbenzahl, mit der das gelingt. Klassische Schranken: **ω(G) ≤ χ(G) ≤ Δ(G) + 1** (Cliquenzahl, Maximalgrad). **Greedy** (feste Reihenfolge, kleinste freie Farbe je Knoten) ist *reihenfolgeabhängig*: dieselbe Instanz kann mit verschiedenen Reihenfolgen sehr unterschiedlich viele Farben brauchen. **Welsh-Powell** (1967, Grad absteigend) und **DSATUR** (Brélaz 1979, Sättigungsgrad) sind zwei feste Strategien dagegen; eine **exakte** Suche (Backtracking mit der Cliquenzahl als untere Schranke) findet χ selbst für kleine Graphen. Bei **Intervallgraphen** ist Greedy nach Startzeit sortiert beweisbar optimal; beim **Kronengraphen** zeigt eine schlechte Reihenfolge das Gegenteil.
 
-**Einordnung in die Reihe:** die Reihe hat zwölf Stücke, dies ist das fünfte (Details in `graphen-planung/PLAN.md` des Portfolio-Ordners):
+**Einordnung in die Reihe:** die Reihe hat dreizehn Stücke (zwölf im Baum, dazu die Fall-Demo interne-verlinkung-demo), dies ist das fünfte (Details in `graphen-planung/PLAN.md` des Portfolio-Ordners):
 
 ```
 1 BFS und DFS (Wurzel)                                                        [gebaut: bfs-dfs-demo]
@@ -66,7 +66,7 @@ Presets (6), alle mit den Zahlen in ihren Hilfetexten (`tests/test_presets.py`):
 - **Instanz** (`gc_scenario.py`): der **Intervallgraph** modelliert Lieferzeitfenster an einem Verteilzentrum – zwei Lieferungen kollidieren, wenn sich ihre Zeitfenster überlappen (immer ein *perfekter Graph*: χ = ω). Der **Zufalls-Konfliktgraph** G(n,p) hat beliebige paarweise Konflikte ohne Intervallstruktur. Das Lehrbuchbeispiel **Kronengraph** (2k Knoten, Kante aᵢ-bⱼ für alle i≠j) ist bipartit, aber jeder Knoten hat Grad k−1 – das Δ+1-Worst-Case für Greedy wird hier tatsächlich erreicht.
 - **Greedy** (`gc_algorithm.greedy_color`): je Knoten in einer gegebenen Reihenfolge die kleinste Farbe, die kein bereits gefärbter Nachbar hat.
 - **Welsh-Powell** (1967): Greedy in absteigender Gradreihenfolge.
-- **DSATUR** (Brélaz 1979): dynamisch – wiederholt der ungefärbte Knoten mit größtem **Sättigungsgrad** (Zahl verschiedener Farben unter bereits gefärbten Nachbarn) gewählt, Gleichstand nach Restgrad.
+- **DSATUR** (Brélaz 1979): dynamisch – wiederholt der ungefärbte Knoten mit größtem **Sättigungsgrad** (Zahl verschiedener Farben unter bereits gefärbten Nachbarn) gewählt, Gleichstand nach dem Grad im Gesamtgraphen (wie in networkx; Brélaz' Original zählt nur die ungefärbten Nachbarn, das ändert einzelne Ergebnisse), dann kleinster Index.
 - **Exakte chromatische Zahl** (`chromatic_number`): Backtracking-Suche, beginnend bei der **Cliquenzahl** ω(G) als untere Schranke, mit Farbsymmetrie-Abbruch (eine neue Farbe wird nur probiert, wenn sie höchstens die bisher größte benutzte + 1 ist). Nur bis 35 Knoten praktikabel (`EXACT_LIMIT`).
 - **Cliquenzahl** (`clique_number`): Branch-and-Bound (Einschließen/Ausschließen je Kandidat), gegen Brute-Force geprüft.
 - **Cliquenüberdeckung** (`clique_cover_dsatur`): DSATUR auf dem **Komplementgraphen** – jede Farbklasse dieser Färbung ist eine Clique im Original.

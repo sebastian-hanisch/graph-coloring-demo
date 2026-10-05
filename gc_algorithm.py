@@ -82,7 +82,7 @@ def welsh_powell(adj):
 
 
 def dsatur(adj):
-    """Brélaz 1979: wiederholt der ungefärbte Knoten mit größtem **Sättigungsgrad** (Zahl verschiedener Farben unter bereits gefärbten Nachbarn) gewählt, bei Gleichstand größter (Rest-)Grad, dann
+    """Brélaz 1979: wiederholt der ungefärbte Knoten mit größtem **Sättigungsgrad** (Zahl verschiedener Farben unter bereits gefärbten Nachbarn) gewählt, bei Gleichstand größter Grad im Gesamtgraphen (nicht Brélaz' Restgrad der ungefärbten Nachbarn - wie networkx), dann
     kleinster Index; erhält die kleinste freie Farbe. Anders als Greedy/Welsh-Powell ist die Reihenfolge nicht vorab fest, sondern entsteht während der Färbung."""
     n = len(adj)
     colors = [-1] * n
