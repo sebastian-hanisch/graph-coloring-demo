@@ -87,7 +87,7 @@ Presets (6), alle mit den Zahlen in ihren Hilfetexten (`tests/test_presets.py`):
 
 ## Tests
 
-`tests/test_algorithm.py` (Gültigkeit aller Verfahren, χ gegen Brute-Force und bekannte Graphen, ω≤χ≤Δ+1, Intervallgraph-Satz auf 150 Instanzen, DSATUR auf Bipartitgraphen auf 100 Instanzen, Kronengraph von Hand, Cliquenüberdeckungs-Äquivalenz, Buchführung, Sonderfälle), `tests/test_scenario.py`, `tests/test_evaluation.py`, `tests/test_presets.py` (jede Zahl der Hilfetexte), `tests/test_claims.py` (jede README-Zahl über die echten Auswertungsfunktionen), `tests/test_app.py` (37: AppTest – Voreinstellung, jedes Preset, jeder Schritt für jede Instanz, jede Position des Färbe-Schritt-Reglers, Randwerte, Permalink-Grenzen, bedingte Regler, Berechnungen auf Abruf, Footer). 91 Tests insgesamt.
+`tests/test_algorithm.py` (Gültigkeit aller Verfahren, χ gegen Brute-Force und bekannte Graphen, ω≤χ≤Δ+1, Intervallgraph-Satz auf 150 Instanzen, DSATUR auf Bipartitgraphen auf 100 Instanzen, Kronengraph von Hand, Cliquenüberdeckungs-Äquivalenz, Buchführung, Sonderfälle), `tests/test_scenario.py`, `tests/test_evaluation.py`, `tests/test_presets.py` (jede Zahl der Hilfetexte), `tests/test_claims.py` (jede README-Zahl über die echten Auswertungsfunktionen), `tests/test_app.py` (37: AppTest – Voreinstellung, jedes Preset, jeder Schritt für jede Instanz, jede Position des Färbe-Schritt-Reglers, Randwerte, Permalink-Grenzen, bedingte Regler, Berechnungen auf Abruf, Footer). 93 Tests insgesamt.
 
 ```
 python -m pytest tests/ -v
